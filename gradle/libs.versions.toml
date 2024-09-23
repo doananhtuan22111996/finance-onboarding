@@ -1,0 +1,10 @@
+[versions]
+financeTheme = "1.0.1"
+financeLaunch = "1.0.0"
+
+[libraries]
+financeTheme = { group = "vn.finance.libs", name = "ui-theme", version.ref = "financeTheme" }
+financeLaunch = { group = "vn.finance.libs", name = "feature-launch", version.ref = "financeLaunch" }
+
+[plugins]
+

@@ -1,0 +1,7 @@
+<resources>
+    <string name="title_activity_onboarding">OnboardingActivity</string>
+    <string name="are_you_ready_to_take_control_of_your_finaces">¿Are you ready to take control of your finaces?</string>
+    <string name="welcome_to_expense_manager">Welcome to Expense Manager</string>
+    <string name="welcome_illustration">Welcome illustration</string>
+    <string name="welcome_bank_card_illustration">Welcome bank card illustration</string>
+</resources>
