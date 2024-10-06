@@ -34,6 +34,9 @@ dependencyResolutionManagement {
         create("mobilex") {
             from("vn.core.libx:versions:1.0.1")
         }
+        create("fnlibs") {
+            from("vn.finance.libs:versions:1.0.0")
+        }
     }
 }
 

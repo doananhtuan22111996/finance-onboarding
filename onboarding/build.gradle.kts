@@ -2,6 +2,8 @@ plugins {
     alias(mobilex.plugins.androidLibrary)
     alias(mobilex.plugins.kotlinAndroid)
     `maven-publish`
+    alias(mobilex.plugins.androidHilt)
+    id("kotlin-kapt")
 }
 
 android {
@@ -70,15 +72,19 @@ publishing {
 }
 
 dependencies {
-    implementation(libs.financeTheme)
+    implementation(fnlibs.financeTheme)
+    implementation(fnlibs.financeNavigation)
     implementation(mobilex.androidxCoreKtx)
+    implementation(mobilex.androidxCoreSplashscreen)
     implementation(mobilex.androidxLifecycleRuntimeKtx)
     implementation(mobilex.androidxActivityCompose)
     implementation(platform(mobilex.androidxComposeBom))
-    implementation(mobilex.androidxComposeUi)
-    implementation(mobilex.androidxComposeUi)
-    implementation(mobilex.androidxComposeUiGraphics)
-    implementation(mobilex.androidxComposeUiToolingPreview)
-    implementation(mobilex.androidxComposeMaterial3)
+    implementation(mobilex.bundles.jetpackComposeComponents)
+    implementation(mobilex.androidxHilt)
+    kapt(mobilex.androidxHiltCompiler)
+}
 
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
