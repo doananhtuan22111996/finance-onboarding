@@ -16,7 +16,7 @@ fun OnboardingNavHost(navigationManager: NavigationManager, navController: NavHo
     NavHost(navController = navController, startDestination = ONBOARDING) {
         composable(ONBOARDING) {
             OnboardingPage(navigateTo = {
-                navigationManager.startActivityByKey(context, NavigationKey.Authentication().key)
+                navigationManager.startActivityByKey(context, NavigationKey.Authentication())
                 context.getActivity()?.finish()
             })
         }
