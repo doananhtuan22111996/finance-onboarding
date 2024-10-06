@@ -84,7 +84,6 @@ fun OnBoardingIndicator(
                     return@launch
                 }
                 pagerState.animateScrollToPage(pagerState.currentPage + 1)
-                // TODO finish onboarding
             }
         }, modifier = Modifier.align(Alignment.CenterHorizontally)) {
             Text("Next")

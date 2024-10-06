@@ -1,6 +1,8 @@
 plugins {
     alias(mobilex.plugins.androidApplication)
     alias(mobilex.plugins.kotlinAndroid)
+    id("kotlin-kapt")
+    alias(mobilex.plugins.androidHilt)
 }
 
 android {
@@ -49,20 +51,21 @@ android {
 }
 
 dependencies {
+    implementation(fnlibs.financeTheme)
+    implementation(fnlibs.financeLaunch)
+    implementation(fnlibs.financeNavigation)
     implementation(project(Configs.BuildModule.onboarding))
 
-    implementation(libs.financeTheme)
-    implementation(libs.financeLaunch)
-
-    implementation(mobilex.androidxCoreSplashscreen)
-    implementation(mobilex.androidxCoreKtx)
-    implementation(mobilex.androidxLifecycleRuntimeKtx)
-    implementation(mobilex.androidxActivityCompose)
+    implementation(mobilex.coreLibxUiComposex)
+    implementation(mobilex.bundles.coreAndroidComponents)
     implementation(platform(mobilex.androidxComposeBom))
-    implementation(mobilex.androidxComposeUi)
-    implementation(mobilex.androidxComposeUiGraphics)
-    implementation(mobilex.androidxComposeUiToolingPreview)
-    implementation(mobilex.androidxComposeMaterial3)
+    implementation(mobilex.bundles.jetpackComposeComponents)
+    implementation(mobilex.androidxHilt)
+    kapt(mobilex.androidxHiltCompiler)
     testImplementation(mobilex.bundles.composeTestComponents)
     androidTestImplementation(mobilex.bundles.androidTestComponents)
+}
+
+kapt {
+    correctErrorTypes = true
 }
