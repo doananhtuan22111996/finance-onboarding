@@ -31,11 +31,11 @@ dependencyResolutionManagement {
         }
     }
     versionCatalogs {
-        create("mobilex") {
+        create("libs") {
             from("vn.core.libx:versions:1.0.1")
         }
         create("fnlibs") {
-            from("vn.finance.libs:versions:1.0.0")
+            from(files("gradle/finance.versions.toml"))
         }
     }
 }
