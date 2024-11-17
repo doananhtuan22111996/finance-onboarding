@@ -15,7 +15,7 @@ object Configs {
     }
 
     object Artifact {
-        const val GROUP_ID = "vn.core.libs"
+        const val GROUP_ID = "vn.finance.libs"
         const val ARTIFACT_ID = "feature-onboarding"
         const val VERSION = "1.0.1"
     }
