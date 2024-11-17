@@ -1,71 +1,22 @@
+import vn.finance.buildSrc.Configs
+
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.kotlinAndroid)
-    id("kotlin-kapt")
-    alias(libs.plugins.androidHilt)
+    vn.core.plugins.androidApplication
 }
 
 android {
     namespace = Configs.namespace
-    compileSdk = Configs.compileSdk
 
     defaultConfig {
         applicationId = Configs.Demo.applicationId
-        minSdk = Configs.minSdk
-        targetSdk = Configs.targetSdk
         versionCode = Configs.Demo.versionCode
         versionName = Configs.Demo.versionName
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
-            )
-        }
-    }
-    compileOptions {
-        sourceCompatibility = Configs.javaVersion
-        targetCompatibility = Configs.javaVersion
-    }
-    kotlinOptions {
-        jvmTarget = Configs.jvmTarget
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = Configs.kotlinCompilerExtensionVersion
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
     }
 }
 
 dependencies {
-    implementation(fnlibs.financeTheme)
-    implementation(fnlibs.financeLaunch)
-    implementation(fnlibs.financeNavigation)
+    implementation(libs.financeTheme)
+    implementation(libs.financeLaunch)
+    implementation(libs.financeNavigation)
     implementation(project(Configs.BuildModule.onboarding))
-
-    implementation(libs.coreLibxUiComposex)
-    implementation(libs.bundles.coreAndroidComponents)
-    implementation(platform(libs.androidxComposeBom))
-    implementation(libs.bundles.jetpackComposeComponents)
-    implementation(libs.androidxHilt)
-    kapt(libs.androidxHiltCompiler)
-    testImplementation(libs.bundles.composeTestComponents)
-    androidTestImplementation(libs.bundles.androidTestComponents)
-}
-
-kapt {
-    correctErrorTypes = true
 }

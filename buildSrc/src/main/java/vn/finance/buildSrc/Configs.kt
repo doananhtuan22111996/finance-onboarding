@@ -1,14 +1,7 @@
-import org.gradle.api.JavaVersion
+package vn.finance.buildSrc
 
 object Configs {
     const val namespace = "vn.finance.onboarding"
-    const val minSdk = 24
-    const val targetSdk = 34
-    const val compileSdk = 34
-    const val jvmTarget = "17"
-    const val kotlinCompilerExtensionVersion = "1.5.14"
-    val javaVersion = JavaVersion.VERSION_17
-    const val mavenDomain = "https://maven.pkg.github.com"
 
     object BuildModule {
         const val onboarding = ":onboarding"
@@ -20,6 +13,10 @@ object Configs {
         const val versionCode = 1
         const val versionName = "1.0.0"
     }
+
+    object Artifact {
+        const val GROUP_ID = "vn.core.libs"
+        const val ARTIFACT_ID = "feature-onboarding"
+        const val VERSION = "1.0.1"
+    }
 }
-
-
