@@ -7,24 +7,21 @@ plugins {
 }
 
 android {
-    namespace = Configs.NAMESPACE
+    namespace = Configs.NAMESPACE_API
 }
 
 publishing {
     publications {
-        create<MavenPublication>(Configs.Artifact.ARTIFACT_ONBOARDING_ID) {
+        create<MavenPublication>(Configs.Artifact.ARTIFACT_ONBOARDING_API_ID) {
             afterEvaluate {
                 from(components["all"])
             }
             groupId = Configs.Artifact.GROUP_ID
-            artifactId = Configs.Artifact.ARTIFACT_ONBOARDING_ID
+            artifactId = Configs.Artifact.ARTIFACT_ONBOARDING_API_ID
             version = Configs.Artifact.VERSION
         }
     }
 }
 
 dependencies {
-    implementation(project(Configs.BuildModule.ONBOARDING_API))
-
-    implementation(libs.financeTheme)
 }

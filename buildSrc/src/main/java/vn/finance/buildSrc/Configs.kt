@@ -1,22 +1,25 @@
 package vn.finance.buildSrc
 
 object Configs {
-    const val namespace = "vn.finance.onboarding"
+    const val NAMESPACE = "vn.finance.onboarding"
+    const val NAMESPACE_API = "vn.finance.onboarding.api"
 
     object BuildModule {
-        const val onboarding = ":onboarding"
+        const val ONBOARDING = ":onboarding"
+        const val ONBOARDING_API = ":onboardingApi"
     }
 
     object Demo {
-        const val namespace = "vn.finance.demo"
-        const val applicationId = "vn.finance.demo"
-        const val versionCode = 1
-        const val versionName = "1.0.0"
+        const val NAMESPACE = "vn.finance.demo"
+        const val APPLICATION_ID = "vn.finance.demo"
+        const val VERSION_CODE = 1
+        const val VERSION_NAME = "1.0.0"
     }
 
     object Artifact {
         const val GROUP_ID = "vn.finance.libs"
-        const val ARTIFACT_ID = "feature-onboarding"
-        const val VERSION = "1.0.1"
+        const val ARTIFACT_ONBOARDING_ID = "feature-onboarding"
+        const val ARTIFACT_ONBOARDING_API_ID = "feature-onboarding-api"
+        const val VERSION = "1.0.2"
     }
 }

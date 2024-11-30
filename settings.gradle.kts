@@ -40,6 +40,7 @@ dependencyResolutionManagement {
 rootProject.name = "finance-onboarding"
 include(":demo")
 include(":onboarding")
+include(":onboardingApi")
 
 fun getLocalProperty(propertyName: String): String {
     val localProperties = Properties().apply {
