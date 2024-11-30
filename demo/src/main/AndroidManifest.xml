@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:name=".DemoApplication"
+        android:name="vn.finance.onboarding.DemoApplication"
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".OnboardingActivity"
+            android:name="vn.finance.onboarding.OnboardingActivity"
             android:exported="true"
             android:theme="@style/AppTheme.SplashScreen">
             <intent-filter>

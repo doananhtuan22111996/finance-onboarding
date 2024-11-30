@@ -5,18 +5,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import vn.finance.navigation.NavigationKey
-import vn.finance.navigation.NavigationManager
-
-const val ONBOARDING = "onboarding"
 
 @Composable
-fun OnboardingNavHost(navigationManager: NavigationManager, navController: NavHostController) {
+internal fun OnboardingNavHost(navController: NavHostController) {
     val context = LocalContext.current
     NavHost(navController = navController, startDestination = ONBOARDING) {
         composable(ONBOARDING) {
             OnboardingPage(navigateTo = {
-                navigationManager.startActivityByKey(context, NavigationKey.Authentication())
+                println("Func navigationTo invoked ")
                 context.getActivity()?.finish()
             })
         }

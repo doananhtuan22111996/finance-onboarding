@@ -5,18 +5,18 @@ plugins {
 }
 
 android {
-    namespace = Configs.namespace
+    namespace = Configs.Demo.NAMESPACE
 
     defaultConfig {
-        applicationId = Configs.Demo.applicationId
-        versionCode = Configs.Demo.versionCode
-        versionName = Configs.Demo.versionName
+        applicationId = Configs.Demo.APPLICATION_ID
+        versionCode = Configs.Demo.VERSION_CODE
+        versionName = Configs.Demo.VERSION_NAME
     }
 }
 
 dependencies {
+    implementation(project(Configs.BuildModule.ONBOARDING))
+
     implementation(libs.financeTheme)
     implementation(libs.financeLaunch)
-    implementation(libs.financeNavigation)
-    implementation(project(Configs.BuildModule.onboarding))
 }

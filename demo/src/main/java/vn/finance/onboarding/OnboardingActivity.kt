@@ -7,15 +7,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
-import vn.finance.navigation.NavigationManager
 import vn.finance.theme.AppTheme
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class OnboardingActivity : ComponentActivity() {
-
-    @Inject
-    lateinit var navigationManager: NavigationManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,9 +19,7 @@ class OnboardingActivity : ComponentActivity() {
         setContent {
             val navController = rememberNavController()
             AppTheme {
-                OnboardingNavHost(
-                    navigationManager = navigationManager, navController = navController
-                )
+                OnboardingNavHost(navController = navController)
             }
         }
     }

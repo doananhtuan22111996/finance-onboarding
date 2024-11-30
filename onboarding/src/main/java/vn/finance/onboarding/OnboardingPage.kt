@@ -43,7 +43,7 @@ fun OnboardingPage(modifier: Modifier = Modifier, navigateTo: () -> Unit = {}) {
         HorizontalPager(
             state = pagerState, modifier = modifier.fillMaxSize()
         ) { page ->
-            OnboardingPage(page = page)
+            OnboardingChildPage(page = page)
         }
         Box(
             modifier = Modifier
@@ -56,7 +56,7 @@ fun OnboardingPage(modifier: Modifier = Modifier, navigateTo: () -> Unit = {}) {
 }
 
 @Composable
-fun OnboardingBackground() {
+private fun OnboardingBackground() {
     Column(modifier = Modifier.fillMaxSize()) {
         Box(
             modifier = Modifier
@@ -73,7 +73,7 @@ fun OnboardingBackground() {
 }
 
 @Composable
-fun OnBoardingIndicator(
+private fun OnBoardingIndicator(
     pagerState: PagerState, coroutineScope: CoroutineScope, navigateTo: () -> Unit
 ) {
     Column {
@@ -111,7 +111,7 @@ fun OnBoardingIndicator(
 }
 
 @Composable
-fun OnboardingPage(page: Int) {
+private fun OnboardingChildPage(page: Int) {
     Column(modifier = Modifier.fillMaxSize()) {
         Box(
             modifier = Modifier
@@ -148,7 +148,7 @@ fun OnboardingPage(page: Int) {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+private fun GreetingPreview() {
     AppTheme {
         OnboardingPage()
     }
