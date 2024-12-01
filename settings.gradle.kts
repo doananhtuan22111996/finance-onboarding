@@ -20,6 +20,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
         maven {
             val ghUsername = System.getenv("GH_USERNAME") ?: getLocalProperty("GH_USERNAME")
             val ghPassword = System.getenv("GH_TOKEN") ?: getLocalProperty("GH_TOKEN")

@@ -1,7 +1,12 @@
 <resources>
     <string name="title_activity_onboarding">OnboardingActivity</string>
-    <string name="are_you_ready_to_take_control_of_your_finaces">¿Are you ready to take control of your finaces?</string>
-    <string name="welcome_to_expense_manager">Welcome to Expense Manager</string>
-    <string name="welcome_illustration">Welcome illustration</string>
-    <string name="welcome_bank_card_illustration">Welcome bank card illustration</string>
+    <string name="next">Next</string>
+    <string name="fastest_payment_in_the_world">Fastest Payment in the world</string>
+    <string name="the_most_secoure_platfrom_for_customer">The most Secoure Platfrom for Customer</string>
+    <string name="paying_for_everything_is_easy_and_convenient">Paying for Everything is Easy and Convenient</string>
+    <string name="integrate_multiple_payment_methoods_to_help_you_up_the_process_quickly">Integrate multiple payment methoods to help you up the process quickly</string>
+    <string name="built_in_fingerprint_face_recognition_and_more_keeping_you_completely_safe">Built-in Fingerprint, face recognition and more, keeping you completely safe</string>
+    <string name="onboarding1">onboarding1</string>
+    <string name="onboarding2">onboarding2</string>
+    <string name="onboarding3">onboarding3</string>
 </resources>
