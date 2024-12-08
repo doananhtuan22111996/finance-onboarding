@@ -127,12 +127,12 @@ private fun OnboardingChildPage(page: Int) {
         )
         Text(
             title,
-            style = MaterialTheme.typography.displayMedium,
+            style = MaterialTheme.typography.displayMedium.copy(color = MaterialTheme.colorScheme.onSurface),
             textAlign = TextAlign.Center,
         )
         Text(
             des,
-            style = MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.bodyMedium.copy(color = MaterialTheme.colorScheme.onSurface),
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(vertical = 8.dp)
         )
